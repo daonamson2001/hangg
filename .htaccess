@@ -1,0 +1,8 @@
+RewriteEngine ON
+# RewriteRule ()();
+# project >controller=abc ->project/abc
+RewriteRule ^([a-z]+)$ ?controller=$1
+# project/?controller=abc&action=xyz ->project/abc/xyz
+RewriteRule ^([a-z]+)/([a-z]+)$ ?controller=$1&action=$2
+# project/?controller=abc&action=xyz&param=123 ->project/abc/xyz/123
+RewriteRule ^([a-z]+)/([a-z/-]+)/([0-9]+)$ ?controller=$1&action=$2&id=$3
